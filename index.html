@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manash Srivastav</title>
+    <style>
+        /* Add some basic styling for visibility toggling */
+        body {
+            margin: 0; /* Remove default body margin */
+            font-family: Arial, sans-serif;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        nav {
+            background-color: #2f2e2e;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        img.passport-photo {
+            width: 120px; /* Adjust the width to fit well on the page */
+            height: 150px;
+            border-radius: 5%;
+            margin-right: 5%; /* Add margin to separate the photo from text */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Links -->
+<nav>
+    <ul>
+        <li><a href="#" onclick="showPage('about')">About</a></li>
+        <li><a href="#" onclick="showPage('education')">Education</a></li>
+        <li><a href="#" onclick="showPage('projects')">Projects and Researches</a></li>
+    </ul>
+</nav>
+
+<!-- About Page -->
+<section id="about" class="active">
+    <h1>About Me</h1>
+    <img src="Manashsri.jpeg" alt="Manash Srivastav" class="passport-photo">
+    <p>Write a brief introduction about yourself here. This content appears after the photo.</p>
+</section>
+
+<!-- Education Page -->
+<section id="education">
+    <h1>Education</h1>
+    <p>List your educational background and achievements here.</p>
+</section>
+
+<!-- Projects and Researches Page -->
+<section id="projects">
+    <h1>Projects and Researches</h1>
+    <p>Showcase your projects and research work here.</p>
+</section>
+
+<script>
+    // JavaScript function to toggle section visibility
+    function showPage(pageId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(function (section) {
+            section.classList.remove('active');
+        });
+
+        // Show the selected section
+        document.getElementById(pageId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
